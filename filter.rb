@@ -26,7 +26,7 @@ Plugin.create(:filter) do
   end
 
   settings "ミュート" do
-    settings "フィルタする「種類」\n※設定は再起動後に有効になります" do
+    settings "ミュートする" do
       multi "クライアント", :filter_mute_kind_client
       multi "単語", :filter_mute_word
     end
