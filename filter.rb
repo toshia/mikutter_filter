@@ -30,6 +30,7 @@ Plugin.create(:filter) do
 
   settings "ミュート" do
     settings "ミュートする" do
+      multi "ユーザ", :muted_users
       multi "クライアント", :filter_mute_kind_client
       multi "単語", :filter_mute_word
     end
