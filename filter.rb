@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby -Ku
 # -*- coding: utf-8 -*-
 Plugin.create(:filter) do
+  UserConfig[:filter_mute_kind_client] ||= []
+  UserConfig[:filter_mute_word] ||= []
+
   filter_show_filter do |msgs|
     mute_words = UserConfig[:filter_mute_kind_client].select{|m|!m.empty?}
     if mute_words
